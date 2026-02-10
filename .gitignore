@@ -1,0 +1,33 @@
+# Docker Volumes
+**/volumes/
+**/n8n_data_local/
+**/acme.json
+
+# Environment Files
+.env
+.env.local
+.env.*.local
+
+# Node.js
+**/node_modules/
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+
+# Next.js
+**/.next/
+**/out/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Project specific
+**/readme.txt
+!VPS.local/README.md

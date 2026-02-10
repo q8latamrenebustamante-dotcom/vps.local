@@ -1,0 +1,18 @@
+services:
+  app:
+    build:
+      context: ./acme
+      dockerfile: Dockerfile
+    container_name: nextjs-app-local
+    restart: unless-stopped
+    environment:
+      - NEXT_PUBLIC_SUPABASE_URL=http://localhost:8000
+      - NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key-here
+    ports:
+      - "3000:3000"
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true

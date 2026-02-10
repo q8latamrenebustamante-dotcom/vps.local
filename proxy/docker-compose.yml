@@ -1,0 +1,15 @@
+services:
+  # Solo para crear la red 'proxy' si no existe
+  # Opcional: Podrías poner un traefik básico aquí si quisieras *.localhost
+  # Pero por simplicidad, los composes ya exponen puertos directamente.
+  setup-network:
+    image: alpine
+    container_name: setup-network
+    networks:
+      - proxy
+    command: [ "echo", "Network 'proxy' is active" ]
+
+networks:
+  proxy:
+    name: proxy
+    driver: bridge
